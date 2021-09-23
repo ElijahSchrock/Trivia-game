@@ -32,7 +32,14 @@ serializedGames = JSON.stringify(games);
 
 let serializedHighScore = localStorage.getItem("games.score");
 
-let scores;
+for(let i = 0; i < games.score; i++){
+    let highScore = games.score[i];
+    if(userScore > highScore){
+        serializedHighScore = userScore;
+    }
+}
+
+let scores; 
 if(serializedHighScore === null){
     scores = []
 } else {
