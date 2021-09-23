@@ -35,7 +35,7 @@ let serializedHighScore = localStorage.getItem("games.score");
 for(let i = 0; i < games.score; i++){
     let highScore = games.score[i];
     if(userScore > highScore){
-        serializedHighScore = userScore;
+        userScore = serializedHighScore;
     }
 }
 
@@ -48,7 +48,7 @@ if(serializedHighScore === null){
 
 scores.push(game.score);
 
-serializedHighScore = JSON.stringify(game.score);
+serializedHighScore = JSON.stringify(scores);
  localStorage.setItem("scores", serializedHighScore);
 
 
