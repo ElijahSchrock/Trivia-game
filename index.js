@@ -35,7 +35,7 @@ let serializedHighScore = localStorage.getItem("games.score");
 for(let i = 0; i < games.score; i++){
     let highScore = games.score[i];
     if(userScore > highScore){
-        userScore = serializedHighScore;
+        window.prompt(highScore)
     }
 }
 
